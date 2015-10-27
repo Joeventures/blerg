@@ -5,4 +5,8 @@
   <%= simple_format(@post.content) %>
 </div>
 
+<div class="edit-me">
+  <%= link_to "Edit This Post", post_edit_path %>
+</div>
+
 <%= link_to "Posts Index", posts_path %>
