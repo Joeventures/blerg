@@ -1,0 +1,14 @@
+<%= form_tag(posts_path, method: :put) do %>
+  <div class="post-field">
+    <%= label_tag "Title: " %>
+    <%= text_field_tag :title, ( edit ? @post.title : '' ) %>
+  </div>
+
+  <div class="post-field">
+    <%= label_tag "Body: " %>
+    <%= text_area_tag :content, ( edit ? @post.content : '' ) %>
+  </div>
+  <%= edit ? (hidden_field_tag :id, @post.id) : '' %>
+
+  <%= submit_tag "Publish!" %>
+<% end %>
